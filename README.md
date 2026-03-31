@@ -1,6 +1,8 @@
 # oss-audit-firefox
 
-**Student:** Devang  
+**Student:** Devang Atiyolil 
+**Roll Number:** 24BCE11332 
+
 **Course:** Open Source Software (NGMC)  
 **Chosen Software:** Mozilla Firefox  
 **License:** Mozilla Public License 2.0 (MPL 2.0)
