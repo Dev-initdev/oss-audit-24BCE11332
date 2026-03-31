@@ -1,69 +1,69 @@
-# OSS Capstone Project (Python)
+oss-audit-firefox
+Student: Devang
+Course: Open Source Software (NGMC)
+Chosen Software: Mozilla Firefox
+License: Mozilla Public License 2.0 (MPL 2.0)
 
-This repository contains my **Open Source Software Capstone Project**, focused on analyzing an open-source software system and demonstrating practical Linux skills using Python and shell scripting.
-
-## 📌 Project Overview
-
-The goal of this project is to understand how open-source software works — including its origin, licensing, philosophy, and real-world impact.
-
-In addition to the report, this repo includes scripts that automate system tasks and showcase command-line operations.
-
-## 🐍 Technologies Used
-
-* Python 3
-* Bash (Shell Scripting)
-* Linux Environment (Ubuntu/Kali/WSL)
-
-## 📂 Repository Structure
-
-```
-.
-├── report.pdf
+What This Repo Contains
+oss-audit-firefox/
+├── README.md
 ├── scripts/
-│   ├── system_identity.sh
-│   ├── package_inspector.sh
-│   ├── disk_auditor.sh
-│   ├── log_analyzer.sh
-│   └── manifesto_generator.sh
-├── python/
-│   └── (your python files here)
-└── README.md
-```
+│   ├── script1_system_identity.sh
+│   ├── script2_package_inspector.sh
+│   ├── script3_disk_permission_auditor.sh
+│   ├── script4_log_analyzer.sh
+│   └── script5_manifesto_generator.sh
+The project report PDF is submitted separately on the VITyarthi portal.
 
-## ⚙️ How to Run
+Script Descriptions
+Script 1: System Identity Report
+Displays a welcome screen with the Linux distro name, kernel version, current user, home directory, uptime, date/time, and a note about the OSS license covering the OS and Firefox.
+Concepts: variables, command substitution $(), /etc/os-release parsing, echo formatting.
+Script 2: FOSS Package Inspector
+Checks if Firefox is installed on the system using dpkg (Debian/Ubuntu) or rpm (Fedora/RHEL), shows package details, and uses a case statement to print a philosophy note about various open-source packages.
+Concepts: if-then-else, case statement, command -v for tool detection, pipes with grep.
+Script 3: Disk and Permission Auditor
+Loops through a list of important system directories (/etc, /var/log, /home, /usr/bin, /tmp) and reports permissions, owner, and disk usage for each. Also checks Firefox's user config directory and explains why its permissions matter.
+Concepts: for loop over array, ls -ld with awk, du -sh with cut, [ -d ] directory check.
+Script 4: Log File Analyzer
+Reads a log file line by line, counts lines matching a keyword (default: error), prints a summary, and shows the last 5 matching lines. Includes a retry mechanism for empty files.
+Concepts: $1/$2 arguments, while IFS= read -r loop, if-then inside loop, counter variables, bash arrays.
+Script 5: Open Source Manifesto Generator
+Asks the user three questions interactively and generates a personalised open source philosophy statement saved to manifesto_<username>.txt.
+Concepts: read -p for input, string concatenation, > and >> file writing, date command, cat to display output. Includes a comment demonstrating why aliases don't work reliably in scripts.
 
-### Run Shell Scripts
+How to Run Each Script on Linux
+Prerequisites
 
-```bash
-chmod +x script_name.sh
-./script_name.sh
-```
+A Linux system (Ubuntu, Fedora, Debian, Arch, or any distro)
+Bash shell (pre-installed on all Linux distros)
+Firefox installed (for Scripts 1, 2, and 3 to show Firefox-specific output)
 
-### Run Python Files
+Step 1: Clone the repo
+bashgit clone https://github.com/<your-username>/oss-audit-firefox.git
+cd oss-audit-firefox
+Step 2: Make scripts executable
+bashchmod +x scripts/*.sh
+Step 3: Run each script
+Script 1:
+bash./scripts/script1_system_identity.sh
+Script 2:
+bash./scripts/script2_package_inspector.sh
+Script 3:
+bash./scripts/script3_disk_permission_auditor.sh
+Script 4:
+bash# Pass any log file and an optional keyword
+./scripts/script4_log_analyzer.sh /var/log/syslog error
 
-```bash
-python3 file_name.py
-```
+# Or use /var/log/auth.log on Ubuntu:
+./scripts/script4_log_analyzer.sh /var/log/auth.log Failed
+Script 5:
+bash./scripts/script5_manifesto_generator.sh
+# Follow the prompts. Output is saved to manifesto_<yourusername>.txt
 
-## 🎯 Features
+Dependencies
 
-* System information reporting
-* Package inspection and validation
-* Disk usage and permission auditing
-* Log file analysis
-* Interactive manifesto generator
-* Python-based utilities (if added)
-
-## 📖 Learning Outcomes
-
-* Understanding of open-source philosophy and licensing
-* Hands-on Linux command-line experience
-* Bash scripting fundamentals
-* Python integration with system tasks
-
-## 👨‍💻 Author
-
-* Name: Devang Atiyolil
-* Course: Open Source Software
-* Repository: oss-audit-24BCE11332
-
+bash (version 4+)
+dpkg or rpm (depending on distro, for Script 2)
+du, ls, awk, cut, grep, date, uname, uptime, whoami — all standard on any Linux system
+Firefox installed for full output from Scripts 2 and 3
