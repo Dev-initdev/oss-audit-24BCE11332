@@ -10,14 +10,22 @@
 ## What This Repo Contains
 
 ```
-oss-audit-firefox/
-├── README.md
-├── scripts/
+LINUX/
+├── README.md          ← add this
+├── Screenshots/
+│   ├── script1.png
+│   ├── script2.png
+│   ├── script3.png
+│   ├── script4.png
+│   └── script5.png
+├── Scripts/
+│   ├── manifesto_devan.txt
 │   ├── script1_system_identity.sh
 │   ├── script2_package_inspector.sh
 │   ├── script3_disk_permission_auditor.sh
 │   ├── script4_log_analyzer.sh
 │   └── script5_manifesto_generator.sh
+└──  OSS_Audit_Firefox_Devang Atiyolil_24BCE11332.pdf
 ```
 
 The project report PDF is submitted separately on the VITyarthi portal.
