@@ -11,7 +11,7 @@
 
 ```
 LINUX/
-├── README.md          ← add this
+├── README.md          
 ├── Screenshots/
 │   ├── script1.png
 │   ├── script2.png
